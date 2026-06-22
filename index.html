@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>เกมเรียนรู้คำราชาศัพท์ไทย</title>
+  <meta name="description" content="เกมเรียนรู้คำราชาศัพท์ของไทยแบบครบวงจร มีโหมดควิซ จับคู่ เติมคำ และบัตรคำ" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Sarabun:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="thai-pattern-top"></div>
+
+  <header class="app-header">
+    <h1 class="app-title">👑 คำราชาศัพท์ไทย</h1>
+    <p class="app-subtitle">เกมเรียนรู้ภาษาไทยอย่างมีระดับ</p>
+  </header>
+
+  <main id="app">
+
+    <!-- ============ หน้าเมนูหลัก ============ -->
+    <section id="screen-home" class="screen active">
+      <div class="card-grid" id="mode-grid"></div>
+
+      <div class="home-stats" id="home-stats">
+        <h2 class="section-title">📊 สถิติของคุณ</h2>
+        <div class="stats-row" id="stats-row"></div>
+        <button class="btn btn-ghost btn-sm" id="btn-reset-stats">ล้างสถิติทั้งหมด</button>
+      </div>
+    </section>
+
+    <!-- ============ หน้าตั้งค่าก่อนเล่น ============ -->
+    <section id="screen-setup" class="screen">
+      <button class="btn btn-back" data-go="home">← กลับเมนู</button>
+      <h2 class="section-title" id="setup-title">ตั้งค่าเกม</h2>
+
+      <div class="setup-box">
+        <label class="setup-label">หมวดคำศัพท์</label>
+        <div class="chip-group" id="category-chips"></div>
+
+        <label class="setup-label">ระดับความยาก</label>
+        <div class="chip-group" id="level-chips">
+          <button class="chip active" data-level="all">ทั้งหมด</button>
+          <button class="chip" data-level="1">ง่าย</button>
+          <button class="chip" data-level="2">ปานกลาง</button>
+          <button class="chip" data-level="3">ยาก</button>
+        </div>
+
+        <label class="setup-label">จำนวนข้อ</label>
+        <div class="chip-group" id="count-chips">
+          <button class="chip" data-count="5">5 ข้อ</button>
+          <button class="chip active" data-count="10">10 ข้อ</button>
+          <button class="chip" data-count="15">15 ข้อ</button>
+          <button class="chip" data-count="0">ทั้งหมด</button>
+        </div>
+
+        <p class="setup-available" id="setup-available"></p>
+        <button class="btn btn-primary btn-lg" id="btn-start-game">เริ่มเล่น ▶</button>
+      </div>
+    </section>
+
+    <!-- ============ หน้าเล่นเกม ============ -->
+    <section id="screen-game" class="screen">
+      <div class="game-topbar">
+        <button class="btn btn-back btn-sm" data-go="home">✕ ออก</button>
+        <div class="game-meta">
+          <span class="meta-item" id="meta-progress">ข้อ 1/10</span>
+          <span class="meta-item meta-score" id="meta-score">⭐ 0</span>
+          <span class="meta-item meta-combo" id="meta-combo"></span>
+          <span class="meta-item meta-timer" id="meta-timer">⏱ 0s</span>
+        </div>
+      </div>
+      <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+
+      <div id="game-area"></div>
+    </section>
+
+    <!-- ============ หน้าสรุปผล ============ -->
+    <section id="screen-result" class="screen">
+      <div class="result-box">
+        <div class="result-emoji" id="result-emoji">🎉</div>
+        <h2 class="result-title" id="result-title">เก่งมาก!</h2>
+        <div class="result-score" id="result-score"></div>
+        <div class="result-detail" id="result-detail"></div>
+        <div class="result-actions">
+          <button class="btn btn-primary" id="btn-replay">เล่นอีกครั้ง</button>
+          <button class="btn btn-ghost" data-go="home">กลับเมนู</button>
+        </div>
+        <div class="result-review" id="result-review"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="app-footer">
+    <button class="btn btn-ghost btn-sm" id="btn-sound-toggle">🔊 เสียง: เปิด</button>
+    <span class="footer-text">สร้างเพื่อการเรียนรู้ภาษาไทย</span>
+  </footer>
+
+  <div class="thai-pattern-bottom"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/games/quiz.js"></script>
+  <script src="js/games/matching.js"></script>
+  <script src="js/games/fill.js"></script>
+  <script src="js/games/flashcard.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
