@@ -126,6 +126,58 @@ const VOCAB = [
   { common: "ให้ของแก่พระสงฆ์", royal: "ถวาย", alt: [], category: "monk", level: 1, tier: "monk", example: "ญาติโยม{royal}สังฆทาน" },
   { common: "เชิญ (พระสงฆ์)", royal: "อาราธนา", alt: [], category: "monk", level: 2, tier: "monk", example: "{royal}พระสงฆ์เจริญพระพุทธมนต์" },
   { common: "นั่ง (พระสงฆ์)", royal: "นั่งอาสนะ", alt: [], category: "monk", level: 3, tier: "monk", example: "พระสงฆ์{royal}บนอาสนะสงฆ์" },
+  { common: "บวชเป็นพระ", royal: "อุปสมบท", alt: [], category: "monk", level: 2, tier: "monk", example: "ชายไทยนิยม{royal}เมื่ออายุครบ ๒๐ ปี" },
+  { common: "บวชเป็นสามเณร", royal: "บรรพชา", alt: [], category: "monk", level: 3, tier: "monk", example: "เด็กชาย{royal}เป็นสามเณรภาคฤดูร้อน" },
+  { common: "สวดมนต์", royal: "เจริญพระพุทธมนต์", alt: [], category: "monk", level: 2, tier: "monk", example: "พระสงฆ์{royal}ในพิธีมงคล" },
+  { common: "เทศน์ / สั่งสอนธรรม", royal: "แสดงธรรม", alt: ["เทศนา"], category: "monk", level: 2, tier: "monk", example: "พระอาจารย์{royal}แก่ญาติโยม" },
+  { common: "ให้พร (พระสงฆ์)", royal: "อนุโมทนา", alt: [], category: "monk", level: 2, tier: "monk", example: "พระสงฆ์{royal}หลังรับถวายสังฆทาน" },
+  { common: "ที่อยู่ของพระ (กุฏิ)", royal: "กุฏิ", alt: [], category: "monk", level: 1, tier: "monk", example: "พระภิกษุจำวัดอยู่ใน{royal}" },
+  { common: "ผ้าของพระสงฆ์", royal: "จีวร", alt: [], category: "monk", level: 1, tier: "monk", example: "ญาติโยมถวาย{royal}แด่พระสงฆ์" },
+
+  // ===== หมวดร่างกาย (เพิ่มเติม) =====
+  { common: "แก้ม", royal: "พระปราง", alt: [], category: "body", level: 3, tier: "king", example: "{royal} เปล่งปลั่งมีน้ำมีนวล" },
+  { common: "คาง", royal: "พระหนุ", alt: [], category: "body", level: 3, tier: "king", example: "{royal} ได้รูป" },
+  { common: "หน้าอก", royal: "พระอุระ", alt: ["พระทรวง"], category: "body", level: 2, tier: "king", example: "ทรงประดับเครื่องราชอิสริยาภรณ์ที่ {royal}" },
+  { common: "เข่า", royal: "พระชานุ", alt: [], category: "body", level: 3, tier: "king", example: "ทรงคุกเข่าโดยใช้ {royal}" },
+  { common: "ผิวหนัง", royal: "พระฉวี", alt: [], category: "body", level: 3, tier: "king", example: "{royal} ผุดผ่อง" },
+  { common: "เหงื่อ", royal: "พระเสโท", alt: [], category: "body", level: 3, tier: "king", example: "{royal} ไหลเพราะอากาศร้อน" },
+  { common: "ขน (ตามตัว)", royal: "พระโลมา", alt: [], category: "body", level: 3, tier: "king", example: "{royal} บนพระวรกาย" },
+  { common: "เงา", royal: "พระฉายา", alt: [], category: "body", level: 3, tier: "king", example: "{royal} ทอดยาวบนพื้น" },
+  { common: "หลัง", royal: "พระปฤษฎางค์", alt: [], category: "body", level: 3, tier: "king", example: "ทรงหันพระปฤษฎางค์ {royal}" },
+  { common: "เอว", royal: "บั้นพระองค์", alt: [], category: "body", level: 3, tier: "king", example: "ทรงคาดรัดพระองค์ที่ {royal}" },
+
+  // ===== หมวดเครือญาติ (เพิ่มเติม) =====
+  { common: "ภรรยา (ของพระมหากษัตริย์)", royal: "พระมเหสี", alt: ["สมเด็จพระราชินี"], category: "family", level: 2, tier: "king", example: "{royal} เสด็จเคียงข้างพระมหากษัตริย์" },
+  { common: "สามี", royal: "พระสวามี", alt: ["พระภัสดา"], category: "family", level: 2, tier: "king", example: "{royal} ทรงดูแลพระชายา" },
+  { common: "ลูกสะใภ้", royal: "พระสุณิสา", alt: [], category: "family", level: 3, tier: "king", example: "{royal} ทรงเป็นที่โปรดปราน" },
+  { common: "ลูกเขย", royal: "พระชามาดา", alt: [], category: "family", level: 3, tier: "king", example: "{royal} เข้าเฝ้าฯ" },
+
+  // ===== หมวดคำกริยา (เพิ่มเติม) =====
+  { common: "ยิ้ม", royal: "แย้มพระโอษฐ์", alt: [], category: "verb", level: 2, tier: "king", example: "พระองค์ทรง{royal}ด้วยความเมตตา" },
+  { common: "ชอบ / โปรดปราน", royal: "โปรด", alt: ["ทรงโปรด"], category: "verb", level: 2, tier: "king", example: "พระองค์ทรง{royal}ดนตรีไทย" },
+  { common: "ตาย (เจ้านายชั้นรอง)", royal: "สิ้นพระชนม์", alt: ["ทิวงคต"], category: "verb", level: 2, tier: "king", example: "สมเด็จพระเจ้าพี่นางเธอ{royal}" },
+  { common: "ออกคำสั่ง", royal: "มีพระบรมราชโองการ", alt: [], category: "verb", level: 3, tier: "king", example: "พระมหากษัตริย์{royal}โปรดเกล้าฯ แต่งตั้ง" },
+  { common: "ลงชื่อ", royal: "ทรงลงพระปรมาภิไธย", alt: [], category: "verb", level: 3, tier: "king", example: "พระองค์{royal}ในเอกสารสำคัญ" },
+  { common: "ถาม", royal: "ตรัสถาม", alt: [], category: "verb", level: 2, tier: "king", example: "พระองค์{royal}ถึงความเป็นอยู่ของราษฎร" },
+  { common: "เกิด (เจ้านายชั้นรอง)", royal: "ประสูติ", alt: [], category: "verb", level: 2, tier: "king", example: "พระราชโอรส{royal}เมื่อเช้าวันนี้" },
+  { common: "รับ", royal: "ทรงรับ", alt: [], category: "verb", level: 1, tier: "king", example: "พระองค์{royal}ของถวายจากประชาชน" },
+
+  // ===== หมวดเครื่องใช้ (เพิ่มเติม) =====
+  { common: "หมอน", royal: "พระเขนย", alt: [], category: "object", level: 3, tier: "king", example: "ทรงหนุน {royal} ขณะบรรทม" },
+  { common: "ดาบ", royal: "พระแสงดาบ", alt: [], category: "object", level: 2, tier: "king", example: "ทรงถือ {royal} ในพระราชพิธี" },
+  { common: "ม้าทรง", royal: "ม้าพระที่นั่ง", alt: [], category: "object", level: 2, tier: "king", example: "ทรงประทับบน {royal}" },
+  { common: "ช้างทรง", royal: "ช้างพระที่นั่ง", alt: [], category: "object", level: 2, tier: "king", example: "{royal} นำขบวนเสด็จ" },
+  { common: "วัง / ที่ประทับ", royal: "พระราชวัง", alt: ["พระตำหนัก"], category: "object", level: 1, tier: "king", example: "พระองค์ประทับ ณ {royal}" },
+  { common: "ห้องน้ำ", royal: "ห้องสรง", alt: [], category: "object", level: 2, tier: "king", example: "เสด็จเข้า {royal}" },
+  { common: "ปืน", royal: "พระแสงปืน", alt: [], category: "object", level: 3, tier: "king", example: "ทรง {royal} ในการเสด็จออกล่าสัตว์" },
+
+  // ===== หมวดอาหาร (เพิ่มเติม) =====
+  { common: "สุรา / เหล้า", royal: "น้ำจัณฑ์", alt: [], category: "food", level: 3, tier: "king", example: "ทรงเสวย {royal} ในงานพระราชพิธี" },
+  { common: "หมากพลู", royal: "พระศรี", alt: ["เครื่องพระศรี"], category: "food", level: 3, tier: "king", example: "มหาดเล็กถวาย {royal}" },
+
+  // ===== หมวดเครื่องแต่งกาย (เพิ่มเติม) =====
+  { common: "ผ้าเช็ดตัว", royal: "ผ้าซับพระองค์", alt: [], category: "cloth", level: 3, tier: "king", example: "ถวาย {royal} หลังทรงสรงน้ำ" },
+  { common: "สร้อยสังวาล", royal: "พระสังวาล", alt: [], category: "cloth", level: 2, tier: "king", example: "ทรง {royal} เฉวียงพระอังสา" },
 ];
 
 // แนบ id ให้แต่ละคำเพื่อใช้อ้างอิงในสถิติ
